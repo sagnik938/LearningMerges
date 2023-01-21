@@ -1,0 +1,17 @@
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git checkout test
+Switched to branch 'test'
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ touch hello2.txt
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ echo "HELLO2">>hello2.txt
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git add .
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git commit -m "Hello2 from branch test"
+[test d85e093] Hello2 from branch test
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello2.txt
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git checkout main
+Switched to branch 'main'
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git merge test
+Merge made by the 'recursive' strategy.
+ hello2.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello2.txt
+
