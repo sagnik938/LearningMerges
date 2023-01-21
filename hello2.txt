@@ -1,1 +1,8 @@
+<<<<<<< HEAD
 Changes main->hello2
+=======
+HELLO2
+Comment from test to hello2
+Changes test->hello2
+>>>>>>> test
+Changes test->hello2
