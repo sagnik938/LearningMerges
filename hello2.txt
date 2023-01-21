@@ -1,2 +1,0 @@
-HELLO2
-Comment from master to hello2
