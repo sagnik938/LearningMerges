@@ -1,0 +1,56 @@
+sagnik@sagnik-HP-Notebook:~$ cd desktop
+bash: cd: desktop: No such file or directory
+sagnik@sagnik-HP-Notebook:~$ ls
+catkin_ws  Documents  IdeaProjects  Music     Public  Templates  Videos
+Desktop    Downloads  __init__.py   Pictures  sagnik  test.py
+sagnik@sagnik-HP-Notebook:~$ clear
+[3;J
+sagnik@sagnik-HP-Notebook:~$ cd Desktop
+sagnik@sagnik-HP-Notebook:~/Desktop$ mkdir antwalk_git_merges
+sagnik@sagnik-HP-Notebook:~/Desktop$ cd antwalk_git_merges
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git init
+Initialized empty Git repository in /home/sagnik/Desktop/antwalk_git_merges/.git/
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ touch hello.txt
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ echo "Hello" >> hello.txt
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git add .
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git commit -m "First"
+[master (root-commit) 37106e3] First
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.txt
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ echo "Hello" >> hello.txt
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git add .
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git commit -m "Second"[master 88b0aa5] Second
+ 1 file changed, 1 insertion(+)
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ echo "Hello" >> hello.txt
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git add .
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git commit -m "Third"[master 3fd19e4] Third
+ 1 file changed, 1 insertion(+)
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git add .sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git commit -m "Third"
+On branch master
+nothing to commit, working directory clean
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git branch test
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git switch test
+git: 'switch' is not a git command. See 'git --help'.
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git checkout -b test
+fatal: A branch named 'test' already exists.
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git checkout test
+Switched to branch 'test'
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ echo world>>hello.txt
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git add .
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git commit -m "world1"
+[test eea301a] world1
+ 1 file changed, 1 insertion(+)
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ echo world>>hello.txt
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git add .
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git commit -m "world2"
+[test cda91df] world2
+ 1 file changed, 1 insertion(+)
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git checkout master
+Switched to branch 'master'
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git merge test
+Updating 3fd19e4..cda91df
+Fast-forward
+ hello.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+sagnik@sagnik-HP-Notebook:~/Desktop/antwalk_git_merges$ git merge test
+Already up-to-date.
